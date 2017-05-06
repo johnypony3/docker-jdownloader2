@@ -10,8 +10,8 @@ MAINTAINER aptalca
 # Set environment variables
 
 # User/Group Id gui app will be executed as default are 99 and 100
-ENV USER_ID=0
-ENV GROUP_ID=0
+ENV USER_ID=1000
+ENV GROUP_ID=1000
 
 # Gui App Name default is "GUI_APPLICATION"
 ENV APP_NAME="JDownloader2"
@@ -47,8 +47,8 @@ apt-get install -y firefox
 # Copy X app start script to right location
 COPY startapp.sh /startapp.sh
 COPY firstrun.sh /etc/my_init.d/firstrun.sh
-COPY /src/jd2.tar /nobody/jd2.tar
-RUN chmod +x /etc/my_init.d/firstrun.sh 
+COPY /src/jd2.tar /edward/jd2.tar
+RUN chmod +x /etc/my_init.d/firstrun.sh
 
 
 
